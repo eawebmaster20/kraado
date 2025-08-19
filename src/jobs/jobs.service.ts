@@ -15,7 +15,6 @@ export class JobsService {
 
 	@Process('remind')
 	async processReminder(job: Job) {
-		// TODO: send reminder (e.g., WebSocket, SMS, etc.)
 		console.log('Reminder for booking', job.data.id);
 	}
 }
