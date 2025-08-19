@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectQueue, Process, Processor } from '@nestjs/bull';
-import { Queue, Job } from 'bull';
+import type { Queue } from 'bull';
+import type { Job } from 'bull';
 
 @Injectable()
 @Processor('reminders')

@@ -22,7 +22,7 @@ describe('BookingsService', () => {
   });
 
   it('should create a booking', async () => {
-  const dto = { clientName: 'Test', clientPhone: '+1234567890', service: ServiceType.MANICURE, startsAt: new Date() };
+    const dto = { clientName: 'Test', clientPhone: '+1234567890', service: ServiceType.MANICURE, startsAt: new Date().toISOString() };
     const result = await service.create(dto, 1);
     expect(result).toHaveProperty('id');
     expect(repo.save).toHaveBeenCalled();
